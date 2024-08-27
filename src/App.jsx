@@ -2,14 +2,14 @@ import { BrowserRouter } from "react-router-dom"
 import { About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works, StarsCanvas } from './components'
 
 function App() {
-  window.addEventListener('wheel', (event) => {
-    event.preventDefault();
-    const scrollContainer = document.querySelector('.scroll-container');
-    scrollContainer.scrollBy({
-      top: event.deltaY < 0 ? -window.innerHeight : window.innerHeight,
-      behavior: 'smooth'
-    });
-  }, { passive: false });
+  // window.addEventListener('wheel', (event) => {
+  //   event.preventDefault();
+  //   const scrollContainer = document.querySelector('.scroll-container');
+  //   scrollContainer.scrollBy({
+  //     top: event.deltaY < 0 ? -window.innerHeight : window.innerHeight,
+  //     behavior: 'smooth'
+  //   });
+  // }, { passive: false });
 
   return (
     <BrowserRouter>
@@ -20,7 +20,7 @@ function App() {
         </div>
         <About />
         <Experience />
-        <Tech />
+        {/* <Tech /> */}
         <Works />
         <Feedbacks />
         <div className="relative z-0">

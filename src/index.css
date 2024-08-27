@@ -218,7 +218,7 @@
 .scroll-section {
   scroll-snap-align: start;
 } */
-.scroll-container {
+/* .scroll-container {
   scroll-snap-type: y proximity;
   overflow-y: scroll;
   height: 100vh;
@@ -229,4 +229,4 @@
 .scroll-section {
   scroll-snap-align: start;
   scroll-snap-stop: always;
-}
+} */
