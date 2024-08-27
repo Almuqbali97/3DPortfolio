@@ -58,12 +58,12 @@ const Tech = () => {
     //   </div>
     // </SectionWrapper>
     <SectionWrapper>
-      <motion.div variants={textVariant()} className='mb-20'>
+      <motion.div variants={textVariant()} className='motion-div mb-20'>
         <p className={styles.sectionSubText}>Technologies</p>
         <h2 className={styles.sectionHeadText}>My tech stack</h2>
       </motion.div>
       <div className='flex flex-row flex-wrap justify-around gap-10'>
-        {technologies.slice(0, !isDesktop ? 3 : technologies.length).map((technologie) => (
+        {technologies.slice(0, !isDesktop ? 5 : technologies.length).map((technologie) => (
           <div className='w-28 h-28' key={technologie.name}>
             <BallCanvas icon={technologie.icon} />
           </div>
