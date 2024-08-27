@@ -71,7 +71,8 @@ const Contact = () => {
   return (
     <SectionWrapper sectionIdName='contact'>
       <div
-        className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}
+        // style={{ transform: "scale(0.9)", transformOrigin: "" }}
+        className={`xl:mt-5 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}
       >
         <motion.div
           variants={slideIn("left", "tween", 0.2, 0.9)}

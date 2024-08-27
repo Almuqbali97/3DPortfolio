@@ -8,7 +8,7 @@ const Earth = () => {
   const earth = useGLTF("./planet/scene.gltf");
 
   return (
-    <primitive object={earth.scene} scale={2.5} position-y={0} rotation-y={0} />
+    <primitive  object={earth.scene} scale={2.5} position-y={0} rotation-y={0} />
   );
 };
 
@@ -25,6 +25,7 @@ const EarthCanvas = () => {
         far: 200,
         position: [-4, 3, 6],
       }}
+      style={{ touchAction: 'pan-y' }}
     >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
@@ -33,6 +34,14 @@ const EarthCanvas = () => {
           enablePan={false}
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
+              onTouchStart={(e) => {
+            if (e.touches.length === 1) {
+              e.target.style.touchAction = 'none'; // Block touch-action for single touch to rotate the model
+            }
+          }}
+          onTouchEnd={(e) => {
+            e.target.style.touchAction = 'pan-y'; // Re-enable touch-action for scrolling
+          }}
         />
         <Earth />
 
