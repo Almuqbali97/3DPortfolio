@@ -230,3 +230,18 @@
   scroll-snap-align: start;
   scroll-snap-stop: always;
 } */
+
+
+@media only screen and (max-width: 500px) {
+
+  .vertical-timeline-element--work,
+  .vertical-timeline-element--education {
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .vertical-timeline-element-content {
+    transform: none !important;
+    transition: none !important;
+  }
+}
