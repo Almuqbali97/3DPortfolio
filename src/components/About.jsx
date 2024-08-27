@@ -24,6 +24,7 @@ const ServiceCard = ({ index, title, icon }) => {
           <img
             src={icon}
             alt={title}
+            loading='lazy'
             className='w-16 h-16 object-contain'
           />
           <h3 className='text-white text-[20px] font-bold text-center'>{title}</h3>
