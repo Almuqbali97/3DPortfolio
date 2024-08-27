@@ -203,7 +203,30 @@
       -2.6em 0em 0 0em rgba(255, 255, 255, 0.7), -1.8em -1.8em 0 0em #ffffff;
   }
 }
+
 /* to optimize animation */
 .motion-div {
   will-change: transform, opacity;
+}
+
+/* .scroll-container {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+.scroll-section {
+  scroll-snap-align: start;
+} */
+.scroll-container {
+  scroll-snap-type: y proximity;
+  overflow-y: scroll;
+  height: 100vh;
+  scroll-behavior: smooth;
+
+}
+
+.scroll-section {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
 }
