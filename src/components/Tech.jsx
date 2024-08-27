@@ -41,16 +41,29 @@ const Tech = () => {
     };
   }, []);
 
-  if (!isDesktop) return null; // Only render on larger screens
+  // if (!isDesktop) return null; // Only render on larger screens
 
   return (
+    // <SectionWrapper>
+    //   <motion.div variants={textVariant()} className='mb-20'>
+    //     <p className={styles.sectionSubText}>Technologies</p>
+    //     <h2 className={styles.sectionHeadText}>My tech stack</h2>
+    //   </motion.div>
+    //   <div className='flex flex-row flex-wrap justify-around gap-10'>
+    //     {technologies.map((technologie) => (
+    //       <div className='w-28 h-28' key={technologie.name}>
+    //         <BallCanvas icon={technologie.icon} />
+    //       </div>
+    //     ))}
+    //   </div>
+    // </SectionWrapper>
     <SectionWrapper>
       <motion.div variants={textVariant()} className='mb-20'>
         <p className={styles.sectionSubText}>Technologies</p>
         <h2 className={styles.sectionHeadText}>My tech stack</h2>
       </motion.div>
       <div className='flex flex-row flex-wrap justify-around gap-10'>
-        {technologies.map((technologie) => (
+        {technologies.slice(0, !isDesktop ? 3 : technologies.length).map((technologie) => (
           <div className='w-28 h-28' key={technologie.name}>
             <BallCanvas icon={technologie.icon} />
           </div>
