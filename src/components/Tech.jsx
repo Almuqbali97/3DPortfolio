@@ -63,7 +63,7 @@ const Tech = () => {
         <h2 className={styles.sectionHeadText}>My Tech Stack</h2>
       </motion.div>
       <div className='flex flex-row flex-wrap justify-around gap-10'>
-        {technologies.slice(0, !isDesktop ? 8 : technologies.length).map((technologie) => (
+        {technologies.slice(0, !isDesktop ? 6 : technologies.length).map((technologie) => (
           <div className='w-28 h-28' key={technologie.name}>
             <BallCanvas icon={technologie.icon} />
           </div>
