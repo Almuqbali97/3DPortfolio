@@ -40,7 +40,7 @@ const Ball = (props) => {
 const BallCanvas = ({ icon }) => {
   return (
     <Canvas
-      // frameloop='demand'
+      frameloop='always' // Enable this to render only when necessary
       dpr={[1, 2]}
       gl={{ preserveDrawingBuffer: true }}
     >
@@ -53,5 +53,6 @@ const BallCanvas = ({ icon }) => {
     </Canvas>
   );
 };
+
 
 export default BallCanvas;
