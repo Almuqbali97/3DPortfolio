@@ -25,10 +25,15 @@ import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
+import ApexTech from "./company/ApexTech.png"
+import company2 from "./company/company2.png"
+import company3 from "./company/company3.png"
+import company4 from "./company/company4.png"
 
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
+
 
 export {
   logo,
@@ -59,4 +64,8 @@ export {
   carrent,
   jobit,
   tripguide,
+  ApexTech,
+  company2,
+  company3,
+  company4,
 };
